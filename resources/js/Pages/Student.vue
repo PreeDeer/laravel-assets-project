@@ -12,7 +12,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg h-screen p-8">
+                <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-8">
                     <h1 class="font-bold text-gray-800">การยืม-คืน ครุภัณฑ์</h1>
                     <h1 class="font-bold text-gray-800">ตรวจสอบหนี้สิน</h1>
                 </div>

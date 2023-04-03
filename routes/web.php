@@ -31,6 +31,9 @@ Route::get('/staff', function () {
 Route::get('/student', function () {
     return Inertia::render('Student');
 })->name('student');
+# API ROUTES
+Route::get('/api/asset', 'App\Http\Controllers\AssetController@index');
+
 
 Route::middleware([
     'auth:sanctum',
