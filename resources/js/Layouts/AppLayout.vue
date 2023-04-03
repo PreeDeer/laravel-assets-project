@@ -42,7 +42,7 @@ const logout = () => {
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
                                 <Link :href="route('dashboard')">
-                                    <img src="/img/AssetLogo.png" class="block h-9 w-auto" />
+                                    <img :src="'/img/logo.png'" class="block h-9 w-auto" />
                                 </Link>
                             </div>
 
@@ -155,9 +155,9 @@ const logout = () => {
                                         <div class="border-t border-gray-200" />
 
                                         <!-- Authentication -->
-                                        <form @submit.prevent="logout">
+                                        <form @submit.prevent="logout" >
                                             <DropdownLink as="button">
-                                                ออกจากระบบ
+                                                <span class="text-red-500">ออกจากระบบ</span>
                                             </DropdownLink>
                                         </form>
                                     </template>
