@@ -11,14 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('assets', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->integer('no_req');
-            $table->bigInteger('student_id');
-            $table->string('description');
-            $table->dateTime('borrow_date');
-            $table->string('status');
+            $table->string('title');
+            $table->text('body');
+            $table->foreignId('user_id')->default(1)->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -28,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('assets');
+        Schema::dropIfExists('posts');
     }
 };

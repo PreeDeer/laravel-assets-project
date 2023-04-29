@@ -57,6 +57,9 @@ const logout = () => {
                                 <NavLink :href="route('student')" :active="route().current('student')">
                                     สำหรับนักศึกษา
                                 </NavLink>
+                                <NavLink :href="route('post')" :active="route().current('post')">
+                                        โพสต์
+                                </NavLink>
                             </div>
                         </div>
 

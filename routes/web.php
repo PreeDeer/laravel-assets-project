@@ -31,9 +31,19 @@ Route::get('/staff', function () {
 Route::get('/student', function () {
     return Inertia::render('Student');
 })->name('student');
-# API ROUTES
-Route::get('/api/asset', 'App\Http\Controllers\AssetController@index');
 
+Route::get('/post', function () {
+    return Inertia::render('Post/Index');
+})->name('post');
+# API ROUTES
+Route::get('/api/assets', 'App\Http\Controllers\AssetController@index');
+# Post
+Route::get('/api/post', 'App\Http\Controllers\PostController@index');
+Route::get('/api/post/{id}', 'App\Http\Controllers\PostController@show');
+Route::post('/api/post', 'App\Http\Controllers\PostController@store');
+# User
+Route::get('/api/user', 'App\Http\Controllers\UserController@index');
+Route::get('/api/user/{id}', 'App\Http\Controllers\UserController@show');
 
 Route::middleware([
     'auth:sanctum',
